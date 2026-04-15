@@ -1,0 +1,15 @@
+<launch>
+  <!-- OnRobot HEX force/torque sensor driver -->
+
+  <arg name="address"  default="192.168.1.1" doc="Sensor/Compute Box IP address" />
+  <arg name="rate"     default="100"          doc="Sample rate in Hz (max 1000)" />
+  <arg name="filter"   default="4"            doc="Filter level: 0=none, 1=500Hz, 2=150Hz, 3=50Hz, 4=15Hz, 5=5Hz, 6=1.5Hz" />
+  <arg name="frame_id" default="ft_sensor_link" doc="TF frame ID for wrench messages" />
+
+  <node name="ft_sensor_node" pkg="onrobot_ft_driver" type="ft_sensor_node" output="screen">
+    <param name="address"  value="$(arg address)" />
+    <param name="rate"     value="$(arg rate)" />
+    <param name="filter"   value="$(arg filter)" />
+    <param name="frame_id" value="$(arg frame_id)" />
+  </node>
+</launch>

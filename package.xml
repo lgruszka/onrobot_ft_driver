@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>onrobot_ft_driver</name>
+  <version>1.0.0</version>
+  <description>ROS driver for OnRobot HEX-E/HEX-H 6-axis force/torque sensor via UDP high-speed protocol</description>
+  <maintainer email="lgruszka@todo.com">lgruszka</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>std_srvs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>diagnostic_msgs</depend>
+  <depend>diagnostic_updater</depend>
+
+  <build_depend>boost</build_depend>
+  <exec_depend>boost</exec_depend>
+</package>
